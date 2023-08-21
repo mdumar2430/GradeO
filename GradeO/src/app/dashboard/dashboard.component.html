@@ -1,0 +1,55 @@
+<div class="container">
+<div class="logo">
+    <h3>Dashboard</h3>
+    </div>
+  <nav>
+    <ul>
+    <li><a routerLink="/">Logout</a></li>
+    </ul>
+    </nav></div><br>
+
+<table id="customers">
+    <tr>
+        <th>RollNum</th>
+        <th>Name</th>
+        <th>Mark1</th>
+        <th>Mark2</th>
+        <th>Mark3</th>
+        <th>Mark4</th>
+        <th>Mark5</th>
+    </tr>
+        <tr>
+            <td><input type="text" placeholder="RollNo" [(ngModel)]="rollno" class="si"/></td>
+            <td><input type="text" placeholder="Enter name" [(ngModel)]="name"/></td>
+            <td><input type="text" placeholder="00" [(ngModel)]="mark1" class="siz"/></td>
+            <td><input type="text" placeholder="00"[(ngModel)]="mark2" class="siz"/></td>
+            <td><input type="text" placeholder="00"[(ngModel)]="mark3" class="siz"/></td>
+            <td><input type="text" placeholder="00"[(ngModel)]="mark4" class="siz"/></td>
+            <td><input type="text" placeholder="00" [(ngModel)]="mark5" class="siz" (change)=Cal()/></td>
+       </tr>
+       </table>
+        <input class="btn" type="button" value="Add Student" (click)=Cal();/><br><br>
+        <table id="customers">
+            <tr>
+                <th>RollNumber</th>
+                <th>Name</th>
+                <th>Mark1</th>
+                <th>Mark2</th>
+                <th>Mark3</th>
+                <th>Mark4</th>
+                <th>Mark5</th>
+                <th>Percentage</th>
+                <th>Grade</th>
+            </tr>
+            <tr *ngFor="let stud of student;let i=index">
+                <td>{{stud.rollno}}</td>
+                <td>{{stud.name}}</td>
+                <td>{{stud.mark1}}</td>
+                <td>{{stud.mark2}}</td>
+                <td>{{stud.mark3}}</td>
+                <td>{{stud.mark4}}</td>
+                <td>{{stud.mark5}}</td>
+                <td>{{stud.percentage}}</td>
+                <td>{{stud.g}}</td>
+            </tr>
+        </table>

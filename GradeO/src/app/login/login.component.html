@@ -1,0 +1,18 @@
+<div class="bg-img">
+    <a routerLink="/">Home</a>
+    <form class="container" >
+      <h1>Login</h1>
+  
+      <label for="email"><b>Username</b></label>
+      <input type="text" placeholder="Username" id="username" name="username" [(ngModel)]="username" required>
+  
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Password" id="password" name="psw" [(ngModel)]="password"  required>
+  
+      <button type="submit" (click)="login()" class="btn">Login</button>
+    </form>
+    <div class="content">
+        <h1>GradeO+</h1>
+        <p>We have made Grading EASY! for you</p>
+      </div>
+  </div>
